@@ -50,7 +50,7 @@ function magazine_numeric_posts_nav() {
   if ( ! in_array( 1, $links ) ) {
       $class = 1 == $paged ? ' class="current"' : '';
 
-      printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( 1 ) ), '1' );
+      printf( '<li><a %s href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( 1 ) ), '1' );
 
       if ( ! in_array( 2, $links ) )
           echo '<li>…</li>';
@@ -60,7 +60,7 @@ function magazine_numeric_posts_nav() {
   sort( $links );
   foreach ( (array) $links as $link ) {
       $class = $paged == $link ? ' class="current"' : '';
-      printf( '<li%s><a href="%s" aria-label="Page %s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $link ) ), esc_url( get_pagenum_link( $link ) ), $link );
+      printf( '<li><a %s href="%s" aria-label="Page %s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $link ) ), esc_url( get_pagenum_link( $link ) ), $link );
   }
 
   /** Link to last page, plus ellipses if necessary */
@@ -69,7 +69,7 @@ function magazine_numeric_posts_nav() {
           echo '<li>…</li>' . "\n";
 
       $class = $paged == $max ? ' class="current"' : '';
-      printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $max ) ), $max );
+      printf( '<li><a %s href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $max ) ), $max );
   }
 
   /** Next Post Link */
