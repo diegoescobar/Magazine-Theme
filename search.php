@@ -11,6 +11,8 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
+		<div class="row" id="content">
+      	<div class="medium-8 columns">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -37,7 +39,7 @@ get_header();
 
 			endwhile;
 
-			the_posts_navigation();
+			magazine_numeric_posts_nav();
 
 		else :
 
@@ -45,6 +47,7 @@ get_header();
 
 		endif;
 		?>
+		</div>
 		<?php if ( is_active_sidebar( 'mag_sidebar' ) ) { ?>
 		<div class="medium-3 columns" data-sticky-container>
 			<div class="sticky" data-sticky data-anchor="content">

@@ -11,7 +11,8 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
-
+		<div class="row" id="content">
+		<div class="row medium-8 large-7 columns">
 		<?php
 		while ( have_posts() ) :
 			the_post();
@@ -32,6 +33,7 @@ get_header();
 
 		endwhile; // End of the loop.
 		?>
+		</div>
 		<?php if ( is_active_sidebar( 'mag_sidebar' ) ) { ?>
 		<div class="medium-3 columns" data-sticky-container>
 			<div class="sticky" data-sticky data-anchor="content">

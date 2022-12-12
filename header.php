@@ -11,15 +11,6 @@
 
 ?>
 
-<head>
-
-	
-	
-
-	
-</head>
-
-
 <!doctype html>
 <html class="no-js" <?php language_attributes(); ?>>
   <head>
@@ -30,33 +21,6 @@
     <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
   </head>
   <body>
-<style>
-  /*icon styles*/
-  .fi-social-facebook {
-    color: dodgerblue;
-    font-size: 2rem;
-  }
-  .fi-social-youtube {
-    color: red;
-    font-size: 2rem;
-  }
-  .fi-social-pinterest {
-    color: darkred;
-    font-size: 2rem;
-  }
-  i.fi-social-instagram {
-    color: brown;
-    font-size: 2rem;
-  }
-  i.fi-social-tumblr {
-    color: navy;
-    font-size: 2rem;
-  }
-  .fi-social-twitter {
-    color: skyblue;
-    font-size: 2rem;
-  }
-</style>
 
 
 <body <?php body_class(); ?>>
@@ -81,8 +45,9 @@
     </div>
     <div class="top-bar-right">
       <ul class="menu">
-        <li><input type="search" placeholder="Search"></li>
-        <li><button type="button" class="button">Search</button></li>
+        <!-- <li><input type="search" placeholder="Search"></li>
+        <li><button type="button" class="button">Search</button></li> -->
+		<?php get_search_form(); ?>
       </ul>
     </div>
   </div>

@@ -11,7 +11,6 @@
 
 
     <!-- We can now combine rows and columns when there's only one column in that row -->
-    <div class="row medium-8 large-7 columns">
       <article id="post-<?php the_ID(); ?>" <?php post_class('blog-post'); ?>>
 	  	<header class="entry-header">
         	<h3><?php the_title( '<h1 class="entry-title">', '</h1>' ); ?></h3>
@@ -56,7 +55,6 @@
           </ul>
         </div>
 		</article>
-    </div>
 
 	
 

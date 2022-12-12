@@ -8,8 +8,6 @@
  */
 
 ?>
-
-
 <article id="content post-<?php the_ID(); ?>" <?php post_class('blog-post'); ?>>
 	<header class="entry-header">
 		<?php
