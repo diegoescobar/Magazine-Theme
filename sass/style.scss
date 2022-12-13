@@ -27,6 +27,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 ----------------------------------------------------------------
 # Generic
 	- Normalize
+	- Foundation
 	- Box sizing
 # Base
 	- Typography
@@ -60,6 +61,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /* Normalize
 --------------------------------------------- */
 @import "generic/normalize";
+
+/* Foundation
+--------------------------------------------- */
+// @import 'theme/foundation';
 
 /* Box sizing
 --------------------------------------------- */
@@ -100,3 +105,4 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /* Alignments
 --------------------------------------------- */
 @import "utilities/alignments";
+

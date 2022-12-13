@@ -137,12 +137,24 @@ function _mag_widgets_init() {
 			'name'          => esc_html__( 'Footer', '_mag' ),
 			'id'            => 'mag_footerbar',
 			'description'   => esc_html__( 'Add widgets here.', '_mag' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s small-12 large-4 columns">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		),
+	);
+	register_sidebar( 
+		array(
+			'name'          => esc_html__( 'Front Page', '_mag' ),
+			'id'            => 'mag_front_sidebar',
+			'description'   => esc_html__( 'Add widgets here.', '_mag' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s large-4 columns">',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h2 class="widget-title">',
 			'after_title'   => '</h2>',
 		),
 	);
+	
 }
 add_action( 'widgets_init', '_mag_widgets_init' );
 
@@ -150,11 +162,16 @@ add_action( 'widgets_init', '_mag_widgets_init' );
  * Enqueue scripts and styles.
  */
 function _mag_scripts() {
+	wp_enqueue_style( '_mag-extended', get_template_directory_uri() . '/foundation/foundation.css', array(), _S_VERSION );
 	wp_enqueue_style( '_mag-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_enqueue_style( '_mag-extended', get_template_directory_uri() . '/css/magazine.css', array(), _S_VERSION );
 	wp_style_add_data( '_mag-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( '_mag-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+
+	wp_enqueue_script( '_mag-reading-time', get_template_directory_uri() . '/js/reading-time.js', array(), _S_VERSION, true );
+
+	// wp_enqueue_script( '_mag-bionic-reader', get_template_directory_uri() . '/js/bionical-reader.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

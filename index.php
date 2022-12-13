@@ -17,7 +17,7 @@ get_header();
 
 	<main id="primary" class="site-main">
 		<div class="row" id="content">
-      	<div class="medium-8 columns">
+      	<div class="small-12 medium-8 columns">
 		<?php
 		if ( have_posts() ) :
 
@@ -33,11 +33,6 @@ get_header();
 			while ( have_posts() ) :
 				the_post();
 
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
 				get_template_part( 'template-parts/content', get_post_type() );
 
 			endwhile;
@@ -52,11 +47,7 @@ get_header();
 		?>
 		</div>
 		<?php if ( is_active_sidebar( 'mag_sidebar' ) ) { ?>
-		<div class="medium-3 columns" data-sticky-container>
-			<div class="sticky" data-sticky data-anchor="content">
-				<?php get_sidebar(); ?>
-			</div>
-		</div>
+			<?php get_sidebar(); ?>
 		<?php } ?>
 	</div>
 	</main><!-- #main -->

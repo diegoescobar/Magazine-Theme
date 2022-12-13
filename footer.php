@@ -10,6 +10,8 @@
  */
 
 ?>
+	</div>
+</main><!-- #main -->
 
 <footer>
   <div class="row expanded callout secondary">
