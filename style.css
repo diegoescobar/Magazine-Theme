@@ -390,7 +390,7 @@ input,
 select,
 optgroup,
 textarea {
-	color: #404040;
+	color: #0a0a0a;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 1rem;
 	line-height: 1.5;
@@ -425,7 +425,7 @@ address {
 }
 
 pre {
-	background: #eee;
+	background: #fefefe;
 	font-family: "Courier 10 Pitch", courier, monospace;
 	line-height: 1.6;
 	margin-bottom: 1.6em;
@@ -443,13 +443,13 @@ var {
 
 abbr,
 acronym {
-	border-bottom: 1px dotted #666;
+	border-bottom: 1px dotted #8a8a8a;
 	cursor: help;
 }
 
 mark,
 ins {
-	background: #fff9c0;
+	background: #8a8a8a;
 	text-decoration: none;
 }
 
@@ -460,11 +460,11 @@ big {
 /* Elements
 --------------------------------------------- */
 body {
-	background: #fff;
+	background: #fefefe;
 }
 
 hr {
-	background-color: #ccc;
+	background-color: #e6e6e6;
 	border: 0;
 	height: 1px;
 	margin-bottom: 1.5em;
@@ -521,15 +521,15 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-	color: #4169e1;
+	color: #1779ba;
 }
 
 a:visited {
-	color: #800080;
+	color: #1468a0;
 }
 
 a:hover, a:focus, a:active {
-	color: #191970;
+	color: #1468a0;
 }
 
 a:focus {
@@ -547,7 +547,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	border: 1px solid;
-	border-color: #ccc #ccc #bbb;
+	border-color: #e6e6e6 #e6e6e6 #cacaca;
 	border-radius: 3px;
 	background: #e6e6e6;
 	color: rgba(0, 0, 0, 0.8);
@@ -559,7 +559,7 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	border-color: #ccc #bbb #aaa;
+	border-color: #e6e6e6 #cacaca #aaa;
 }
 
 button:active, button:focus,
@@ -569,7 +569,7 @@ input[type="reset"]:active,
 input[type="reset"]:focus,
 input[type="submit"]:active,
 input[type="submit"]:focus {
-	border-color: #aaa #bbb #bbb;
+	border-color: #aaa #cacaca #cacaca;
 }
 
 input[type="text"],
@@ -588,8 +588,8 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	color: #666;
-	border: 1px solid #ccc;
+	color: #8a8a8a;
+	border: 1px solid #e6e6e6;
 	border-radius: 3px;
 	padding: 3px;
 }
@@ -614,7 +614,7 @@ textarea:focus {
 }
 
 select {
-	border: 1px solid #ccc;
+	border: 1px solid #e6e6e6;
 }
 
 textarea {
@@ -888,7 +888,7 @@ textarea {
 }
 
 .screen-reader-text:focus {
-	background-color: #f1f1f1;
+	background-color: #e6e6e6;
 	border-radius: 3px;
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 	clip: auto !important;

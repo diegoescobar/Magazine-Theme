@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-	<div class="row small-12 medium-8 large-9 columns">
+	<div class="row small-12 medium-8 columns">
 		<?php
 		while ( have_posts() ) :
 			the_post();

@@ -14,7 +14,7 @@
 
 get_header();
 ?>
-<div class="small-12 medium-8 columns">
+<div class="small-12 medium-10 columns">
 	<?php
 	while ( have_posts() ) :
 		the_post();
@@ -29,8 +29,5 @@ get_header();
 	endwhile; // End of the loop.
 	?>
 </div>
-<?php if ( is_active_sidebar( 'mag_sidebar' ) ) { ?>
-	<?php get_sidebar(); ?>
-<?php } ?>
 <?php
 get_footer();

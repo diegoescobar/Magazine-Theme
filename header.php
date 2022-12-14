@@ -122,4 +122,4 @@
 </header>
 
 <main id="primary" class="site-main">
-	<div class="row" id="content">
+	<div class="row  align-center" id="content">

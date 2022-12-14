@@ -11,7 +11,7 @@ if ( ! is_active_sidebar( 'mag_sidebar' ) ) {
 	return;
 }
 ?>
-	<div class="small-12 medium-3 columns" data-sticky-container>
+	<div class="small-12 medium-4 columns" data-sticky-container>
 		<div class="sticky" data-sticky data-anchor="content">
 			<aside id="secondary" class="widget-area">
 				<?php dynamic_sidebar( 'mag_sidebar' ); ?>
