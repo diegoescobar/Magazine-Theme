@@ -1,25 +1,27 @@
+@import '../foundation/settings/custom_settings';
+
 .wp-pagenavi {
     clear: both;
 
     a, 
     span {
-        color: #FFF;
+        color: $main-light;
         text-decoration: none;
-        background-color:#6FB7E9;
-        border: 1px solid #B2D1E5;
+        background-color:$primary-color;;
+        border: 1px solid $secondary-color;;
         padding: 5px 5px;
         margin: 2px;
     }
     
     a:hover, 
     span.current {
-        border-color: #E9F2F9;
-        background-color:#6FB7E9;
+        border-color: $primary-light;
+        background-color:$primary-color;;
     }
     
     span.current {
         font-weight: bold;
-        background-color:#3C8DC5;
+        background-color:$primary-dark;
     }
 }
 
@@ -28,7 +30,7 @@
     li a:hover,
     li.active a,
     li.disabled {
-        color: #fff;
+        color: $main-light;
         text-decoration:none;
     }
     li {
@@ -39,7 +41,7 @@
     li a:hover,
     li.active a,
     li.disabled {
-        background-color: #6FB7E9;
+        background-color: $primary-color;;
         border-radius: 3px;
         cursor: pointer;
         padding: 12px;
@@ -48,11 +50,11 @@
     
     li a:hover,
     li.active a {
-        background-color: #3C8DC5;
+        background-color: $primary-medium;
     }
 }  
 
-    /*icon styles*/
+/*icon styles*/
 .fi-social-facebook {
     color: dodgerblue;
     font-size: 2rem;

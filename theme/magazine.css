@@ -1,0 +1,85 @@
+.wp-pagenavi {
+	clear: both;
+}
+
+.wp-pagenavi a,
+.wp-pagenavi span {
+	color: #fefefe;
+	text-decoration: none;
+	background-color: #cc4b37;
+	border: 1px solid #ffae00;
+	padding: 5px 5px;
+	margin: 2px;
+}
+
+.wp-pagenavi a:hover,
+.wp-pagenavi span.current {
+	border-color: #36130e;
+	background-color: #cc4b37;
+}
+
+.wp-pagenavi span.current {
+	font-weight: bold;
+	background-color: #c44632;
+}
+
+.navigation li a,
+.navigation li a:hover,
+.navigation li.active a,
+.navigation li.disabled {
+	color: #fefefe;
+	text-decoration: none;
+}
+
+.navigation li {
+	display: inline;
+}
+
+.navigation li a,
+.navigation li a:hover,
+.navigation li.active a,
+.navigation li.disabled {
+	background-color: #cc4b37;
+	border-radius: 3px;
+	cursor: pointer;
+	padding: 12px;
+	padding: 0.75rem;
+}
+
+.navigation li a:hover,
+.navigation li.active a {
+	background-color: #74291d;
+}
+
+/*icon styles*/
+.fi-social-facebook {
+	color: dodgerblue;
+	font-size: 2rem;
+}
+
+.fi-social-youtube {
+	color: red;
+	font-size: 2rem;
+}
+
+.fi-social-pinterest {
+	color: darkred;
+	font-size: 2rem;
+}
+
+i.fi-social-instagram {
+	color: brown;
+	font-size: 2rem;
+}
+
+i.fi-social-tumblr {
+	color: navy;
+	font-size: 2rem;
+}
+
+.fi-social-twitter {
+	color: skyblue;
+	font-size: 2rem;
+}
+
+/*# sourceMappingURL=magazine.css.map */

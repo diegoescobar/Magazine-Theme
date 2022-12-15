@@ -1,0 +1,248 @@
+
+@import '../util/util';
+
+$foundation-palette: (
+  "primary": #1779ba,
+  "secondary": #cc1122,
+  "success": #3adb76,
+  "warning": #ffae00,
+  "alert": #cc4b37,
+);
+
+$social-palette: (
+  "facebook": dodgerblue,
+  "youtube": red,
+  "pinterest": darkred,
+  "instagram" : brown,
+  "tumblr" : navy,
+  "twitter" : skyblue,
+);
+
+
+
+$light-gray: #e6e6e6;
+$medium-gray: #cacaca;
+$dark-gray: #8a8a8a;
+// $black: #0a0a0a;
+// $white: #fefefe;
+
+$black: #0a0a0a;
+$white: #fefefe;
+
+@include add-foundation-colors;
+
+$main-dark: $black;
+$main-light: $white;
+
+$primary-light:  scale-color($primary-color, $lightness: -74%);
+$primary-medium: scale-color($primary-color, $lightness: -44%);
+$primary-dark: scale-color($primary-color, $lightness: -5%);
+
+
+$body-background: $main-light;
+$body-font-color: $main-dark;
+
+$body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
+
+$header-font-family: $body-font-family;
+$header-small-font-color: $medium-gray;
+$anchor-color: $primary-color;
+$anchor-color-hover: scale-color($secondary-color, $lightness: -14%);
+$hr-border: 1px solid $medium-gray;
+$blockquote-color: $dark-gray;
+$blockquote-border: 1px solid $medium-gray;
+$keystroke-color: $main-dark;
+$keystroke-background: $primary-light;
+$abbr-underline: 1px dotted $main-dark;
+
+$subheader-color: $dark-gray;
+$cite-color: $dark-gray;
+$code-color: $main-dark;
+$code-background: $primary-light;
+$code-border: 1px solid $medium-gray;
+
+$accordion-background: $main-light;
+$accordion-item-color: $primary-color;
+$accordion-item-background-hover: $primary-light;
+$accordion-content-background: $main-light;
+$accordion-content-border: 1px solid $primary-light;
+$accordion-content-color: $body-font-color;
+
+$accordionmenu-arrow-color: $primary-color;
+
+$badge-background: $primary-color;
+$badge-color: $main-light;
+$badge-color-alt: $main-dark;
+$badge-palette: $foundation-palette;
+
+$breadcrumbs-item-color: $primary-color;
+$breadcrumbs-item-color-current: $main-dark;
+$breadcrumbs-item-color-disabled: $medium-gray;
+$breadcrumbs-item-separator-color: $medium-gray;
+
+$button-background: $primary-color;
+$button-background-hover: scale-color($button-background, $lightness: -15%);
+$button-color: $main-light;
+$button-color-alt: $main-dark;
+$button-palette: $foundation-palette;
+
+
+$callout-background: $main-light;
+$callout-border: 1px solid rgba($main-dark, 0.25);
+$callout-font-color: $body-font-color;
+$callout-font-color-alt: $body-background;
+
+$card-background: $main-light;
+$card-font-color: $body-font-color;
+$card-divider-background: $primary-light;
+$card-border: 1px solid $primary-light;
+
+$closebutton-color: $dark-gray;
+$closebutton-color-hover: $main-dark;
+
+$drilldown-background: $main-light;
+$drilldown-submenu-background: $main-light;
+$drilldown-arrow-color: $primary-color;
+
+$dropdown-background: $body-background;
+$dropdown-border: 1px solid $medium-gray;
+
+$dropdownmenu-arrow-color: $anchor-color;
+$dropdownmenu-submenu-background: $main-light;
+$dropdownmenu-border: 1px solid $medium-gray;
+$dropdown-menu-item-color-active: get-color(primary);
+
+$fieldset-border: 1px solid $medium-gray;
+$helptext-color: $main-dark;
+$input-prefix-color: $main-dark;
+$input-prefix-background: $primary-light;
+$input-prefix-border: 1px solid $medium-gray;
+$form-label-color: $main-dark;
+$select-background: $main-light;
+$select-triangle-color: $dark-gray;
+$input-color: $main-dark;
+$input-placeholder-color: $medium-gray;
+$input-background: $main-light;
+$input-background-focus: $main-light;
+$input-background-disabled: $primary-light;
+$input-border: 1px solid $medium-gray;
+$input-border-focus: 1px solid $dark-gray;
+$input-shadow: inset 0 1px 2px rgba($main-dark, 0.1);
+$input-shadow-focus: 0 0 5px $medium-gray;
+$input-transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+
+$label-background: $primary-color;
+$label-color: $main-light;
+$label-color-alt: $main-dark;
+$label-palette: $foundation-palette;
+
+$menu-item-color-active: $main-light;
+$menu-item-color-alt-active: $main-dark;
+$menu-item-background-active: get-color(primary);
+
+$meter-background: $medium-gray;
+$meter-fill-good: $success-color;
+$meter-fill-medium: $warning-color;
+$meter-fill-bad: $alert-color;
+
+$offcanvas-background: $primary-light;
+$offcanvas-exit-background: rgba($main-light, 0.25);
+
+$orbit-bullet-background: $medium-gray;
+$orbit-bullet-background-active: $dark-gray;
+$orbit-caption-background: rgba($main-dark, 0.5);
+$orbit-control-background-hover: rgba($main-dark, 0.5);
+
+$pagination-item-color: $main-dark;
+$pagination-item-background-hover: $primary-light;
+$pagination-item-background-current: $primary-color;
+$pagination-item-color-current: $main-light;
+$pagination-item-color-disabled: $medium-gray;
+$pagination-ellipsis-color: $main-dark;
+
+$progress-background: $medium-gray;
+
+$progress-meter-background: $primary-color;
+
+$prototype-arrow-color: $main-dark;
+$prototype-border-color: $medium-gray;
+
+$prototype-separator-background: $primary-color;
+
+$prototype-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+
+$reveal-background: $main-light;
+$reveal-border: 1px solid $medium-gray;
+$reveal-overlay-background: rgba($main-dark, 0.45);
+
+$slider-background: $primary-light;
+$slider-fill-background: $medium-gray;
+$slider-handle-background: $primary-color;
+
+$switch-background: $medium-gray;
+$switch-background-active: $primary-color;
+$switch-paddle-background: $main-light;
+
+$table-hover-scale: 2%;
+$table-color-scale: 5%;
+$table-background: $main-light;
+$table-border: 1px solid smart-scale($table-background, $table-color-scale);
+$table-row-hover: darken($table-background, $table-hover-scale);
+$table-row-stripe-hover: darken($table-background, $table-color-scale + $table-hover-scale);
+$table-striped-background: smart-scale($table-background, $table-color-scale);
+$table-head-background: smart-scale($table-background, $table-color-scale * 0.5);
+$table-head-row-hover: darken($table-head-background, $table-hover-scale);
+$table-foot-background: smart-scale($table-background, $table-color-scale);
+$table-foot-row-hover: darken($table-foot-background, $table-hover-scale);
+$table-head-font-color: $body-font-color;
+$table-foot-font-color: $body-font-color;
+
+$tab-background: $main-light;
+$tab-color: $primary-color;
+$tab-background-active: $primary-light;
+$tab-active-color: $primary-color;
+$tab-item-background-hover: $main-light;
+$tab-content-background: $main-light;
+$tab-content-border: $primary-light;
+$tab-content-color: $body-font-color;
+
+$thumbnail-border: 4px solid $main-light;
+$thumbnail-shadow: 0 0 0 1px rgba($main-dark, 0.2);
+$thumbnail-shadow-hover: 0 0 6px 1px rgba($primary-color, 0.5);
+
+$titlebar-background: $primary-dark;
+$titlebar-color: $primary-light;
+$titlebar-icon-color: $primary-light;
+$titlebar-icon-color-hover: $primary-light;
+
+$has-tip-border-bottom: dotted 1px $dark-gray;
+$tooltip-background-color: $main-dark;
+$tooltip-color: $main-light;
+
+$topbar-background: $primary-light;
+$topbar-submenu-background: $topbar-background;
+
+
+
+$color__background-body: $body-background; //#fff;
+$color__background-screen: $primary-light;
+$color__background-hr: $primary-light;
+$color__background-button: $primary-light;
+$color__background-pre: $main-light;
+$color__background-ins: $dark-gray;
+
+$color__text-screen: $primary-color;
+$color__text-input: $dark-gray;
+$color__text-input-focus: $primary-dark;
+$color__link: $primary-color; //royalblue
+$color__link-visited: scale-color($primary-color, $lightness: -14%);; //purple
+$color__link-hover: scale-color($primary-color, $lightness: -14%);; //midnightblue
+$color__text-main: $body-font-color;
+
+$color__border-button: $primary-light $primary-light $medium-gray;
+$color__border-button-hover: $primary-light $medium-gray $dark-gray;
+$color__border-button-focus: $dark-gray $medium-gray $medium-gray;
+$color__border-input: $primary-light;
+$color__border-abbr: $dark-gray;
+
