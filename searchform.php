@@ -9,7 +9,7 @@
  */
 ?>
 
-<form role="search" method="get" id="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>" class="input-group">
+<form role="search" method="get" id="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>" class=" margin-bottom-0">
     <ul class="menu">
         <li><input type="search" class="form-control border-0" placeholder="Search" aria-label="search nico" name="s" id="search-input" value="<?php echo esc_attr( get_search_query() ); ?>"></li>
         <li><input type="submit" class="search-submit button" value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" /></li>

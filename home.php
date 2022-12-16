@@ -20,7 +20,7 @@ get_header();
 <hr>
 
 <div class="row">
-  <div class="large-8 columns" style="border-right: 1px solid #E3E5E8;">
+  <div class="large-9 columns" style="border-right: 1px solid #E3E5E8;">
 
   <?php
         if ( have_posts() ) :
@@ -53,7 +53,7 @@ get_header();
   </div>
 
     <?php if ( is_active_sidebar( 'mag_sidebar' ) ) { ?>
-    <div class="large-4 columns" data-sticky-container>
+    <div class="large-3 columns" data-sticky-container>
         <aside class="sticky" data-sticky data-anchor="content">
             <?php dynamic_sidebar( 'mag_sidebar' ); ?>
         </aside>
