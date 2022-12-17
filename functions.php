@@ -207,3 +207,6 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 require_once get_template_directory() . '/inc/common-functions.php';
+
+// require_once get_template_directory() . '/updates/plugin_init.php';
+require_once TEMPLATEPATH . '/updates/init.php';

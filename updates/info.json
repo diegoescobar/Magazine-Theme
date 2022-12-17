@@ -1,0 +1,25 @@
+{
+	"name" : "_magazine",
+	"slug" : "_mag",
+	"author" : "<a href='http://punkworks.local'>punkworks</a>",
+	"author_profile" : "http://diegoescobar.github.io/",
+	"version" : "1.2",
+	"download_url" : "https://github.com/diegoescobar/Magazine-Theme/archive/refs/heads/main.zip",
+	
+	"details_url": "https://github.com/diegoescobar/Magazine-Theme/",
+	"download_url": "https://github.com/diegoescobar/Magazine-Theme/archive/refs/heads/main.zip",	
+
+	"requires" : "3.0",
+	"tested" : "5.8",
+	"requires_php" : "5.3",
+	"last_updated" : "2022-10-30 02:10:00",
+	"sections" : {
+		"description" : "Updates The Magazine Theeme",
+		"installation" : "Click the activate button and that's it.",
+		"changelog" : "<h4>1.0 –  1 august 2022</h4><ul><li>Bug fixes.</li><li>Initital release.</li></ul>"
+	},
+	"banners" : {
+		"low" : "http://punkworks.local/wp-content/uploads/updater/banner-772x250.jpg",
+		"high" : "http://punkworks.local/wp-content/uploads/updater/banner-1544x500.jpg"
+	}
+}

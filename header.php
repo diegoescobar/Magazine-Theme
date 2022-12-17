@@ -84,7 +84,7 @@
 			</div>
 				
 			<div class="top-bar-right">
-				<?php get_search_form(); ?>
+				<?php //get_search_form(); ?>
 			</div>
 		</div>
 	<!-- /Sub Navigation -->
