@@ -19,7 +19,6 @@ $social-palette: (
 );
 
 
-
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
@@ -37,7 +36,6 @@ $main-light: $white;
 $primary-light:  scale-color($primary-color, $lightness: -74%);
 $primary-medium: scale-color($primary-color, $lightness: -44%);
 $primary-dark: scale-color($primary-color, $lightness: -5%);
-
 
 $body-background: $main-light;
 $body-font-color: $main-dark;
