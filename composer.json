@@ -6,12 +6,12 @@
         "WordPress",
         "Themes"
     ],
-    "homepage": "https://github.com/Automattic/_s",
+    "homepage": "http://stage.diegoescobar.ca/magazine",
     "license": "GPL-2.0-or-later",
     "authors": [
         {
             "name": "Contributors",
-            "homepage": "https://github.com/Automattic/_s/graphs/contributors"
+            "homepage": "http://stage.diegoescobar.ca/magazine/contributors"
         }
     ],
     "require": {
@@ -29,7 +29,7 @@
         "make-pot": "wp i18n make-pot . languages/_s.pot"
     },
     "support": {
-        "issues": "https://github.com/Automattic/_s/issues",
-        "source": "https://github.com/Automattic/_s"
+        "issues": "http://stage.diegoescobar.ca/magazine/issues",
+        "source": "http://stage.diegoescobar.ca/magazine"
     }
 }

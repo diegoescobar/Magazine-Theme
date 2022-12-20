@@ -8,13 +8,13 @@
     "WordPress",
     "Theme"
   ],
-  "homepage": "https://github.com/Automattic/_s#readme",
+  "homepage": "http://stage.diegoescobar.ca/magazine#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Automattic/_s.git"
+    "url": "git+http://stage.diegoescobar.ca/magazine.git"
   },
   "bugs": {
-    "url": "https://github.com/Automattic/_s/issues"
+    "url": "http://stage.diegoescobar.ca/magazine/issues"
   },
   "devDependencies": {
     "@wordpress/scripts": "^19.2.2",
