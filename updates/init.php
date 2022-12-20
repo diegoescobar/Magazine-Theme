@@ -4,7 +4,7 @@
     use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
     
     $myUpdateChecker = PucFactory::buildUpdateChecker(
-        'theme.json',
+        'http://stage.diegoescobar.ca/wp-content/themes/_mag/info.json',
         get_template_directory(), //Full path to the main plugin file or functions.php.
         '_mag'
     );

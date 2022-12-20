@@ -3,11 +3,9 @@
 	"slug" : "_mag",
 	"author" : "<a href='http://punkworks.local'>punkworks</a>",
 	"author_profile" : "http://diegoescobar.github.io/",
-	"version" : "1.2",
-	"download_url" : "https://github.com/diegoescobar/Magazine-Theme/archive/refs/heads/main.zip",
-	
-	"details_url": "https://github.com/diegoescobar/Magazine-Theme/",
-	"download_url": "https://github.com/diegoescobar/Magazine-Theme/archive/refs/heads/main.zip",	
+	"version" : "1.0.1",
+	"download_url" : "http://stage.diegoescobar.ca/wp-content/uploads/2022/12/mag.zip",	
+	"details_url": "http://stage.diegoescobar.ca/blog/2022/12/17/magazine-theme/",
 
 	"requires" : "3.0",
 	"tested" : "5.8",
