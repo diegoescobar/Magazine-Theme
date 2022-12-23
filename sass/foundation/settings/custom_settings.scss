@@ -13,6 +13,17 @@ $foundation-palette: (
   "warning": #ffae00,
   "alert": #cc4b37,
 );
+
+$social-palette: (
+  "facebook": dodgerblue,
+  "youtube": red,
+  "pinterest": darkred,
+  "instagram" : brown,
+  "tumblr" : navy,
+  "twitter" : skyblue,
+);
+
+
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
@@ -61,18 +72,9 @@ $breakpoints-hidpi: (
 $print-breakpoint: large;
 $breakpoint-classes: (small medium large);
 
-// 3. The Grid
-// -----------
 
-$grid-row-width: $global-width;
-$grid-column-count: 12;
-$grid-column-gutter: (
-  "small": 20px,
-  "medium": 30px,
-);
-$grid-column-align-edge: true;
-$grid-column-alias: 'columns';
-$block-grid-max: 8;
+$body-background: $main-light;
+$body-font-color: $main-dark;
 
 // 4. Base Typography
 // ------------------
