@@ -162,10 +162,10 @@ add_action( 'widgets_init', '_mag_widgets_init' );
  * Enqueue scripts and styles.
  */
 function _mag_scripts() {
-	wp_enqueue_style( '_mag-extended', get_template_directory_uri() . '/foundation/foundation.css', array(), _S_VERSION );
+	// wp_enqueue_style( '_mag-extended', get_template_directory_uri() . '/foundation/foundation.css', array(), _S_VERSION );
 	wp_enqueue_style( '_mag-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_enqueue_style( '_mag-extended', get_template_directory_uri() . '/css/magazine.css', array(), _S_VERSION );
-	wp_style_add_data( '_mag-style', 'rtl', 'replace' );
+	// wp_enqueue_style( '_mag-extended', get_template_directory_uri() . '/css/magazine.css', array(), _S_VERSION );
+	// wp_style_add_data( '_mag-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( '_mag-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
@@ -202,8 +202,11 @@ require get_template_directory() . '/inc/customizer.php';
 /**
  * Load Jetpack compatibility file.
  */
-if ( defined( 'JETPACK__VERSION' ) ) {
-	require get_template_directory() . '/inc/jetpack.php';
-}
+// if ( defined( 'JETPACK__VERSION' ) ) {
+	// require get_template_directory() . '/inc/jetpack.php';
+// }
 
 require_once get_template_directory() . '/inc/common-functions.php';
+
+// require_once get_template_directory() . '/updates/plugin_init.php';
+require_once TEMPLATEPATH . '/updates/init.php';

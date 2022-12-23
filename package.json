@@ -1,23 +1,23 @@
 {
-  "name": "underscores",
+  "name": "magazine",
   "version": "1.0.0",
-  "description": "Hi. I'm a starter theme called _s, or underscores, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.",
+  "description": "Hi. I'm a Underscore and Foundations based starter theme for Magazine style sites.",
   "author": "Automattic Theme Team",
   "license": "GPL-2.0-or-later",
   "keywords": [
     "WordPress",
     "Theme"
   ],
-  "homepage": "https://github.com/Automattic/_s#readme",
+  "homepage": "http://stage.diegoescobar.ca/magazine#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Automattic/_s.git"
+    "url": "git+http://stage.diegoescobar.ca/magazine.git"
   },
   "bugs": {
-    "url": "https://github.com/Automattic/_s/issues"
+    "url": "http://stage.diegoescobar.ca/magazine/issues"
   },
   "devDependencies": {
-    "@wordpress/scripts": "^19.2.2",
+    "@wordpress/scripts": "^25.0.0",
     "dir-archiver": "^1.1.1",
     "node-sass": "^7.0.1",
     "rtlcss": "^3.5.0"
@@ -36,8 +36,8 @@
     "map": false
   },
   "scripts": {
-    "watch": "node-sass sass/ -o ./ --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
-    "compile:css": "node-sass sass/ -o ./ && stylelint '*.css' --fix || true && stylelint '*.css' --fix",
+    "watch": "node-sass sass/ -o css/ --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
+    "compile:css": "node-sass sass/ -o css/ && stylelint 'css/*.css' --fix || true && stylelint 'css/*.css' --fix",
     "compile:rtl": "rtlcss style.css style-rtl.css",
     "lint:scss": "wp-scripts lint-style 'sass/**/*.scss'",
     "lint:js": "wp-scripts lint-js 'js/*.js'",

@@ -11,7 +11,7 @@ get_header();
 ?>
 
 	
-<div class="small-12 medium-8 columns">
+<div class="small-12 medium-7 columns">
 
 <?php if ( have_posts() ) : ?>
 

@@ -1,2 +1,26 @@
 @import '../../foundation/settings/_settings';
-@import '../../foundation/settings/custom_settings';
+// @import '../../foundation/settings/custom_settings';
+
+
+
+
+$color__background-body: $body-background;
+$color__background-screen: $body-background;
+$color__background-hr: $light-gray;
+$color__background-button:$button-background;
+$color__background-pre: $light-gray;
+$color__background-ins: $dark-gray;
+
+$color__text-screen: $body-font-color;
+$color__text-input: $dark-gray;
+$color__text-input-focus: $primary-color;
+$color__link: $primary-color; //royalblue
+$color__link-visited: scale-color($primary-color, $lightness: -14%);; //purple
+$color__link-hover: scale-color($primary-color, $lightness: -14%);; //midnightblue
+$color__text-main: $body-font-color;
+
+$color__border-button: $button-border;
+$color__border-button-hover: $button-background-hover;
+$color__border-button-focus: $button-background-hover;
+$color__border-input: $medium-gray;
+$color__border-abbr: $dark-gray;

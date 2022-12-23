@@ -31,61 +31,89 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', '_mag' ); ?></a>
 
-	<header id="masthead" class="site-header">
-	<!-- Sub Navigation -->
-	<div class="top-bar branding">
-		<div class="top-bar-left">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				//<img src="https://via.placeholder.com//450x183&text=LOGO" alt="<?php bloginfo( 'name' ); ?>">
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+	<div data-sticky-container>
+  <div class="title-bar" data-sticky data-options="marginTop:0;" style="width:100%">
+    <div class="title-bar-left"><!-- Content --></div>
+    <div class="title-bar-right"><!-- Content --></div>
+  </div>
+</div>
+
+
+<header id="masthead" class="site-header">
+		<!-- Sub Navigation -->
+		<div class="top-bar branding">
+			<div class="top-bar-left">
 				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$_mag_description = get_bloginfo( 'description', 'display' );
-			if ( $_mag_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $_mag_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div>
-			
-		<div class="top-bar-right">
-			<div data-responsive-toggle="top-bar-menu" data-hide-for="medium">
-				<button class="menu-icon" type="button" data-toggle></button>
-				<div class="title-bar-title">Menu</div>
+				the_custom_logo();
+				if ( is_front_page() && is_home() ) :
+					//<img src="https://via.placeholder.com//450x183&text=LOGO" alt="<?php bloginfo( 'name' ); ?>">
+					?>
+					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<?php
+				else :
+					?>
+					<div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
+					<?php
+				endif;
+				$_mag_description = get_bloginfo( 'description', 'display' );
+				if ( $_mag_description || is_customize_preview() ) :
+					?>
+					<div class="site-description"><?php echo $_mag_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
+				<?php endif; ?>
+			</div>
+				
+			<div class="top-bar-right">
+				<div data-responsive-toggle="top-bar-menu" data-hide-for="medium">
+					<button class="menu-icon" type="button" data-toggle></button>
+					<div class="title-bar-title">Menu</div>
+				</div>
 			</div>
 		</div>
-	</div>
-	<div class="top-bar" id="top-bar-menu">
-		<div class="top-bar-left">
-		<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'top-menu',
-					'menu_id'        => 'top-menu',
-					'container'		=> 'ul',
-					'items_wrap'      => '<ul class="menu">%3$s</ul>',
-				)
-			);
-			?>
+		<div class="top-bar" id="top-bar-menu">
+			<div class="top-bar-left">
+			<?php
+				wp_nav_menu(
+					array(
+						'theme_location' => 'top-menu',
+						'menu_id'        => 'top-menu',
+						'container'		=> 'ul',
+						'items_wrap'      => '<ul class="menu">%3$s</ul>',
+					)
+				);
+				?>
+			</div>
+				
+			<div class="top-bar-right">
+				<?php //get_search_form(); ?>
+			</div>
 		</div>
-			
-		<div class="top-bar-right">
-			<?php get_search_form(); ?>
-		</div>
-	</div>
-  <!-- /Sub Navigation -->
+	<!-- /Sub Navigation -->
+</header>
 
- <?php if (is_home() || is_front_page()) { ?>
-  <!-- logo and ad break -->
-  <div class="row">
-    <div class="medium-4 columns">
-		<ul class="menu vertical medium-text-center" data-responsive-menu="drilldown medium-dropdown">
+<?php if (is_home() || is_front_page()) { ?>
+	<section>
+	<!-- logo and ad break -->
+	<div class="row">
+		<div class="medium-4 columns">
+			<ul class="menu vertical medium-text-center" data-responsive-menu="drilldown medium-dropdown">
+			<?php
+				wp_nav_menu(
+					array(
+						'theme_location' => 'main-menu',
+						'menu_id'        => 'primary-menu',
+					)
+				);
+				?>
+			</ul>
+		</div>
+		<div class="small-12 medium-8 columns">
+		<img src="https://via.placeholder.com//900x175&text=Responsive Ads - ZURB Playground/333" alt="advertisement for deep fried Twinkies">
+		</div>
+	</div>
+	<!-- / logo and ad break -->
+	<br>
+	<div class="top-bar" id="main-menu">
+		<ul class="menu vertical medium-horizontal expanded medium-text-center" data-responsive-menu="drilldown medium-dropdown">
 		<?php
 			wp_nav_menu(
 				array(
@@ -95,31 +123,8 @@
 			);
 			?>
 		</ul>
-    </div>
-    <div class="small-12 medium-8 columns">
-      <img src="https://via.placeholder.com//900x175&text=Responsive Ads - ZURB Playground/333" alt="advertisement for deep fried Twinkies">
-    </div>
-  </div>
-  <!-- / logo and ad break -->
-  <?php } ?>
-
-  <br>
-
-  <div class="top-bar" id="main-menu">
-    <ul class="menu vertical medium-horizontal expanded medium-text-center" data-responsive-menu="drilldown medium-dropdown">
-	  <?php
-		wp_nav_menu(
-			array(
-				'theme_location' => 'main-menu',
-				'menu_id'        => 'primary-menu',
-			)
-		);
-		?>
-
-    </ul>
-  </div>
-
-</header>
-
-<main id="primary" class="site-main">
+	</div>
+</section>
+<?php } ?>
+<main id="primary" class="site-main grid-container">
 	<div class="row  align-center" id="content">

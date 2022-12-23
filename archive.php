@@ -24,7 +24,7 @@ get_header();
 			while ( have_posts() ) :
 				the_post();
 
-				get_template_part( 'template-parts/content', 'home' );
+				get_template_part( 'template-parts/content', 'archive' );
 
 			endwhile;
 
@@ -40,11 +40,7 @@ get_header();
 		?>
 		</div>
 		<?php if ( is_active_sidebar( 'mag_sidebar' ) ) { ?>
-		<div class="medium-4 columns" data-sticky-container>
-			<div class="sticky" data-sticky data-anchor="content">
-				<?php get_sidebar(); ?>
-			</div>
-		</div>
+			<?php get_sidebar(); ?>
 		<?php } ?>
 	
 
