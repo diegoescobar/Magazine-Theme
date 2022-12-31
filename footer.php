@@ -14,7 +14,7 @@
 </main><!-- #main -->
 
 <footer>
-  <div class="row expanded callout secondary">
+  <div class="row expanded callout">
 
 
 <?php if ( is_active_sidebar( 'mag_footerbar' ) ) : ?>

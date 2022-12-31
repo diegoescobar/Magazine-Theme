@@ -1,13 +1,11 @@
 @import '../../foundation/settings/_settings';
-// @import '../../foundation/settings/custom_settings';
-
-
+@import '../../foundation/settings/custom_settings';
 
 
 $color__background-body: $body-background;
 $color__background-screen: $body-background;
 $color__background-hr: $light-gray;
-$color__background-button:$button-background;
+$color__background-button: $button-background;
 $color__background-pre: $light-gray;
 $color__background-ins: $dark-gray;
 

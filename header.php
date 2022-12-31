@@ -28,21 +28,13 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<div id="page" class="site">
+<div id="page" class="site" data-sticky-container>
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', '_mag' ); ?></a>
 
-	<div data-sticky-container>
-  <div class="title-bar" data-sticky data-options="marginTop:0;" style="width:100%">
-    <div class="title-bar-left"><!-- Content --></div>
-    <div class="title-bar-right"><!-- Content --></div>
-  </div>
-</div>
-
-
-<header id="masthead" class="site-header">
+	<header id="masthead" class="site-header top-bar ">
 		<!-- Sub Navigation -->
-		<div class="top-bar branding">
-			<div class="top-bar-left">
+		<div class="top-bar-left">
+			<div class="branding">
 				<?php
 				the_custom_logo();
 				if ( is_front_page() && is_home() ) :
@@ -62,13 +54,14 @@
 				<?php endif; ?>
 			</div>
 				
-			<div class="top-bar-right">
-				<div data-responsive-toggle="top-bar-menu" data-hide-for="medium">
-					<button class="menu-icon" type="button" data-toggle></button>
-					<div class="title-bar-title">Menu</div>
-				</div>
+		</div>
+		<div class="top-bar-right">
+			<div data-responsive-toggle="top-bar-menu" data-hide-for="medium">
+				<button class="menu-icon" type="button" data-toggle></button>
+				<div class="title-bar-title">Menu</div>
 			</div>
 		</div>
+		
 		<div class="top-bar" id="top-bar-menu">
 			<div class="top-bar-left">
 			<?php
@@ -90,7 +83,7 @@
 	<!-- /Sub Navigation -->
 </header>
 
-<?php if (is_home() || is_front_page()) { ?>
+<?php if ( is_front_page() ) { ?>
 	<section>
 	<!-- logo and ad break -->
 	<div class="row">

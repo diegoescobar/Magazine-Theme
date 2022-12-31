@@ -1,0 +1,21 @@
+{
+	"version": 3,
+	"file": "custom_settings.css",
+	"sources": [
+		"../../../sass/foundation/settings/custom_settings.scss",
+		"../../../sass/foundation/util/_util.scss",
+		"../../../sass/foundation/util/_math.scss",
+		"../../../sass/foundation/util/_unit.scss",
+		"../../../sass/foundation/util/_value.scss",
+		"../../../sass/foundation/util/_direction.scss",
+		"../../../sass/foundation/util/_color.scss",
+		"../../../sass/foundation/util/_selector.scss",
+		"../../../sass/foundation/util/_flex.scss",
+		"../../../sass/foundation/util/_breakpoint.scss",
+		"../../../sass/foundation/util/_mixins.scss",
+		"../../../sass/foundation/util/_typography.scss",
+		"../../../sass/foundation/settings/_settings.scss"
+	],
+	"names": [],
+	"mappings": ""
+}

@@ -1,0 +1,121 @@
+.wp-pagenavi {
+	clear: both;
+}
+
+.wp-pagenavi a,
+.wp-pagenavi span {
+	color: darkred;
+	text-decoration: none;
+	background-color: darkred;
+	border: 1px solid dodgerblue;
+	padding: 5px 5px;
+	margin: 2px;
+}
+
+.wp-pagenavi a:hover,
+.wp-pagenavi span.current {
+	border-color: darkred;
+	background-color: darkred;
+}
+
+.wp-pagenavi span.current {
+	font-weight: bold;
+	background-color: darkred;
+}
+
+.navigation li a,
+.navigation li a:hover,
+.navigation li.active a,
+.navigation li.disabled {
+	color: darkred;
+	text-decoration: none;
+}
+
+.navigation li {
+	display: inline;
+}
+
+.navigation li a,
+.navigation li a:hover,
+.navigation li.active a,
+.navigation li.disabled {
+	background-color: darkred;
+	border-radius: 3px;
+	cursor: pointer;
+	padding: 12px;
+	padding: 0.75rem;
+}
+
+.navigation li a:hover,
+.navigation li.active a {
+	background-color: darkred;
+}
+
+/*icon styles*/
+.fi-social-facebook {
+	color: dodgerblue;
+	font-size: 2rem;
+}
+
+.fi-social-youtube {
+	color: red;
+	font-size: 2rem;
+}
+
+.fi-social-pinterest {
+	color: darkred;
+	font-size: 2rem;
+}
+
+i.fi-social-instagram {
+	color: brown;
+	font-size: 2rem;
+}
+
+i.fi-social-tumblr {
+	color: navy;
+	font-size: 2rem;
+}
+
+.fi-social-twitter {
+	color: skyblue;
+	font-size: 2rem;
+}
+
+.top-bar {
+	color: #e6e6e6;
+}
+
+.top-bar .site-description, .top-bar .site-title a {
+	color: #e6e6e6;
+}
+
+.top-bar a {
+	color: #e6e6e6;
+}
+
+.top-bar a:active, .top-bar a:hover, .top-bar a:visited {
+	color: #e6e6e6;
+	text-decoration: underline;
+}
+
+.top-bar .site-title a {
+	font-size: 32px;
+}
+
+.post-thumbnail {
+	background-color: darkred;
+	color: #e6e6e6;
+}
+
+.post-thumbnail.no-thumb {
+	background-color: darkred;
+	color: #e6e6e6;
+	width: 100%;
+}
+
+.post-thumbnail.no-thumb span {
+	color: #e6e6e6;
+}
+
+/*# sourceMappingURL=magazine.css.map */

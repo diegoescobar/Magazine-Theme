@@ -33,7 +33,10 @@ get_header();
 		?>
 	</div>
 
-	<?php if ( is_active_sidebar( 'mag_sidebar' ) ) { ?>
+	
+	<?php if ( is_active_sidebar( 'mag_sidebar' )  && !has_post_format( 'gallery' ) ) { 
+		
+		?>
 		<?php get_sidebar(); ?>
 	<?php } ?>
 

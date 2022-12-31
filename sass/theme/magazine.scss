@@ -7,7 +7,7 @@
     span {
         color: $primary-color;
         text-decoration: none;
-        background-color:$primary-color;;
+        background-color: $primary-color;;
         border: 1px solid $secondary-color;;
         padding: 5px 5px;
         margin: 2px;
@@ -16,12 +16,12 @@
     a:hover, 
     span.current {
         border-color: $primary-color;
-        background-color:$primary-color;;
+        background-color: $primary-color;;
     }
     
     span.current {
         font-weight: bold;
-        background-color:$primary-color;
+        background-color: $primary-color;
     }
 }
 
@@ -78,4 +78,40 @@ i.fi-social-tumblr {
 .fi-social-twitter {
     color: skyblue;
     font-size: 2rem;
+}
+
+
+.top-bar {
+    color: $main-light;
+
+    .site-description, .site-title a {
+        color: $main-light;
+    }
+
+    a {
+        color: $main-light;
+        &:active, &:hover, &:visited {
+            color: $main-light;   
+            text-decoration: underline;
+        }
+    }
+
+    .site-title a {
+        font-size: 32px;
+    }
+}
+
+.post-thumbnail {
+    background-color: $primary-color;
+    color: $main-light;
+    &.no-thumb {
+        background-color: $primary-color;
+        // display: inline-block;
+        color: $main-light;
+        // height: 100%; 
+        width:100%;
+        span {
+            color: $main-light;
+        }
+    }
 }

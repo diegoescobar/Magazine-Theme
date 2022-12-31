@@ -39,6 +39,9 @@ function _mag_setup() {
 		*/
 	add_theme_support( 'title-tag' );
 
+
+	add_theme_support ( 'post-formats',  array( 'video', 'gallery' ) );
+
 	/*
 		* Enable support for Post Thumbnails on posts and pages.
 		*
@@ -72,17 +75,17 @@ function _mag_setup() {
 		)
 	);
 
-	// Set up the WordPress core custom background feature.
-	add_theme_support(
-		'custom-background',
-		apply_filters(
-			'_mag_custom_background_args',
-			array(
-				'default-color' => 'ffffff',
-				'default-image' => '',
-			)
-		)
-	);
+	// // Set up the WordPress core custom background feature.
+	// add_theme_support(
+	// 	'custom-background',
+	// 	apply_filters(
+	// 		'_mag_custom_background_args',
+	// 		array(
+	// 			'default-color' => 'ffffff',
+	// 			'default-image' => '',
+	// 		)
+	// 	)
+	// );
 
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );

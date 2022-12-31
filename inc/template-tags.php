@@ -120,13 +120,19 @@ if ( ! function_exists( '_mag_post_thumbnail' ) ) :
 	 * element when on single views.
 	 */
 	function _mag_post_thumbnail() {
-		if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
+		if ( post_password_required() || is_attachment() ) {
 			return;
 		}
 
+
+		if ( ! has_post_thumbnail() &&  !is_singular() ){ /*?>
+			<div class="post-thumbnail no-thumb">
+				<span class="placeholder">Default Image</span>
+			</div><!-- .post-thumbnail -->
+		<?php */ }
+
 		if ( is_singular() ) :
 			?>
-
 			<div class="post-thumbnail">
 				<?php the_post_thumbnail(); ?>
 			</div><!-- .post-thumbnail -->
@@ -136,7 +142,7 @@ if ( ! function_exists( '_mag_post_thumbnail' ) ) :
 			<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
 				<?php
 					the_post_thumbnail(
-						'post-thumbnail',
+						'large',
 						array(
 							'alt' => the_title_attribute(
 								array(
