@@ -1,8 +1,11 @@
 
 <?php
 /**
+ * 
  * Custom search form 
+ * 
  * @package _magazine
+ * 
  */
 ?>
 

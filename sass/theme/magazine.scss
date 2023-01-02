@@ -119,6 +119,21 @@ i.fi-social-tumblr {
             // @extend .fi-magnifying-glass;
         }
     }
+
+    .dropdown.menu {
+        li.is-active a {
+            color: #fff;
+        }
+    }
+
+    .sub-menu, .submenu {
+        top: 40px;
+        left: 0;
+        margin-left: 0;
+        li {
+            list-style: none;
+        }
+    }
 }
 
 .post-thumbnail {

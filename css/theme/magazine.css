@@ -117,6 +117,20 @@ i.fi-social-tumblr {
 	width: 80px;
 }
 
+.top-bar .dropdown.menu li.is-active a {
+	color: #fff;
+}
+
+.top-bar .sub-menu, .top-bar .submenu {
+	top: 40px;
+	left: 0;
+	margin-left: 0;
+}
+
+.top-bar .sub-menu li, .top-bar .submenu li {
+	list-style: none;
+}
+
 .post-thumbnail {
 	background-color: darkred;
 	color: #e6e6e6;

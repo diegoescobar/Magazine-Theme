@@ -1,4 +1,4 @@
-<article class="columns large-4 margin-2 padding-2">
+<article class="columns small-6 large-4 margin-2 padding-2">
       <?php 
         _mag_post_thumbnail(); ?>
       <?php the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' ); ?>

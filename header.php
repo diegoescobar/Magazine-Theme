@@ -75,7 +75,8 @@ $stickyHeader = get_option( 'sticky_header', true );
 						'theme_location' => 'top-menu',
 						'menu_id'        => 'top-menu',
 						'container'		=> 'ul',
-						'items_wrap'      => '<ul class="menu">%3$s</ul>',
+						'start_depth' => 1,
+						'items_wrap'      => '<ul class="dropdown menu" data-dropdown-menu>%3$s</ul>',
 					)
 				);
 				?>
