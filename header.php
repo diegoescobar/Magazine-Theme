@@ -38,6 +38,10 @@ $stickyHeader = get_option( 'sticky_header', true );
 	<div class="top-bar" <?php if ($stickyHeader) echo 'data-sticky data-anchor="content"'; ?>>
 		<!-- Sub Navigation -->
 		<div class="top-bar-left">
+			<div class="hmbgr-menu" data-responsive-toggle="top-bar-menu" data-hide-for="medium">
+				<button class="menu-icon" type="button" data-toggle></button>
+				<div class="title-bar-title">Menu</div>
+			</div>
 			<div class="branding">
 				<?php
 				the_custom_logo();
@@ -59,12 +63,9 @@ $stickyHeader = get_option( 'sticky_header', true );
 			</div>
 				
 		</div>
-		<div class="top-bar-right">
-			<div data-responsive-toggle="top-bar-menu" data-hide-for="medium">
-				<button class="menu-icon" type="button" data-toggle></button>
-				<div class="title-bar-title">Menu</div>
-			</div>
-		</div>
+		<!-- <div class="top-bar-right">
+			
+		</div> -->
 		
 		<div class="top-bar" id="top-bar-menu">
 			<div class="top-bar-left">
