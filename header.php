@@ -31,10 +31,11 @@
 
 $stickyHeader = get_option( 'sticky_header', true );
 ?>
-<div id="page" class="site" <?php if ($stickyHeader) echo 'data-sticky-container'; ?>>
+<div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', '_mag' ); ?></a>
 
-	<header id="masthead" class="site-header top-bar" <?php if ($stickyHeader) echo 'data-sticky data-anchor="content"'; ?>>
+	<header id="masthead" class="site-header" <?php if ($stickyHeader) echo 'data-sticky-container'; ?>>
+	<div class="top-bar" <?php if ($stickyHeader) echo 'data-sticky data-anchor="content"'; ?>>
 		<!-- Sub Navigation -->
 		<div class="top-bar-left">
 			<div class="branding">

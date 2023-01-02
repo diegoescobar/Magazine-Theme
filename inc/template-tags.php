@@ -120,16 +120,35 @@ if ( ! function_exists( '_mag_post_thumbnail' ) ) :
 	 * element when on single views.
 	 */
 	function _mag_post_thumbnail() {
+		global $post;
 		if ( post_password_required() || is_attachment() ) {
 			return;
 		}
 
 
-		if ( ! has_post_thumbnail() &&  !is_singular() ){ /*?>
+		if ( (!has_post_thumbnail() || has_post_format('gallery') ) && is_singular() ){ 
+			return;
+		/*?>
 			<div class="post-thumbnail no-thumb">
 				<span class="placeholder">Default Image</span>
 			</div><!-- .post-thumbnail -->
 		<?php */ }
+
+
+		if ( has_post_format('gallery') || !has_post_thumbnail() && !is_singular()){
+
+			$media = get_attached_media('image', get_the_ID()); 
+			$thumnail_data_arr = array_slice($media, 0, 1);
+			foreach ($thumnail_data_arr AS $thumnail_data){
+				// var_dump( $thumnail_data );
+			echo '<a class="post-thumbnail" href="'. get_the_permalink() . '" aria-hidden="true" tabindex="-1">';
+			  echo wp_get_attachment_image( $thumnail_data->ID );
+			  echo '</a>';
+			}
+		}
+
+
+
 
 		if ( is_singular() ) :
 			?>
