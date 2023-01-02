@@ -27,18 +27,21 @@
 
 
 <body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
-<div id="page" class="site" data-sticky-container>
+<?php wp_body_open(); 
+
+$stickyHeader = get_option( 'sticky_header', true );
+?>
+<div id="page" class="site" <?php if ($stickyHeader) echo 'data-sticky-container'; ?>>
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', '_mag' ); ?></a>
 
-	<header id="masthead" class="site-header top-bar ">
+	<header id="masthead" class="site-header top-bar" <?php if ($stickyHeader) echo 'data-sticky data-anchor="content"'; ?>>
 		<!-- Sub Navigation -->
 		<div class="top-bar-left">
 			<div class="branding">
 				<?php
 				the_custom_logo();
 				if ( is_front_page() && is_home() ) :
-					//<img src="https://via.placeholder.com//450x183&text=LOGO" alt="<?php bloginfo( 'name' ); ?>">
+					//<img src="https://via.placeholder.com//450x183&text=LOGO" alt="<?php bloginfo( 'name' ); ">
 					?>
 					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 					<?php
@@ -77,7 +80,7 @@
 			</div>
 				
 			<div class="top-bar-right">
-				<?php //get_search_form(); ?>
+				<?php get_search_form(); ?>
 			</div>
 		</div>
 	<!-- /Sub Navigation -->

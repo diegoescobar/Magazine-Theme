@@ -63,4 +63,4 @@
 	<footer class="entry-footer">
 		<?php _mag_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+</article>#post-<?php the_ID(); ?>

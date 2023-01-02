@@ -10,9 +10,12 @@
 if ( ! is_active_sidebar( 'mag_sidebar' ) ) {
 	return;
 }
+
+$stickyAside = get_option( 'sticky_aside', false );
+
 ?>
-	<div class="small-12 medium-3 columns" data-sticky-container>
-		<div class="sticky" data-sticky data-anchor="content">
+	<div class="small-12 medium-3 columns" <?php if ($stickyAside) echo "data-sticky-container"; ?>>
+		<div class="sticky"  <?php if ($stickyAside) echo 'data-sticky data-anchor="content"'; ?>>
 			<aside id="secondary" class="widget-area">
 				<?php dynamic_sidebar( 'mag_sidebar' ); ?>
 			</aside><!-- #secondary -->

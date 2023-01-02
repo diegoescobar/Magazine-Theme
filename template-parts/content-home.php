@@ -1,5 +1,16 @@
 <article class="columns large-4 margin-2 padding-2">
-      <?php _mag_post_thumbnail(); ?>
+      <?php 
+
+      if (has_post_format('gallery') || !has_post_thumbnail()){
+       // the_content();
+       $media = get_attached_media('image', get_the_ID()); // Get image attachment(s) to the current Post
+       $thumnail_data_arr = array_slice($media, 0, 1);
+       foreach ($thumnail_data_arr AS $thumnail_data){
+         echo wp_get_attachment_image( $thumnail_data->ID );
+       }
+      } else{
+        _mag_post_thumbnail();
+      } ?>
       <?php the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' ); ?>
         <p>
           <span><i class="fi-torso"> <?php _mag_posted_by(); ?> &nbsp;&nbsp;</i></span>
@@ -10,7 +21,10 @@
         if (is_single()){
             the_content();
         } else {
+
+          if (!has_post_format('gallery')){
             the_excerpt();
+          }
         }
     ?>
 </article>
