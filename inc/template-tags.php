@@ -142,7 +142,7 @@ if ( ! function_exists( '_mag_post_thumbnail' ) ) :
 			foreach ($thumnail_data_arr AS $thumnail_data){
 				// var_dump( $thumnail_data );
 			echo '<a class="post-thumbnail" href="'. get_the_permalink() . '" aria-hidden="true" tabindex="-1">';
-			  echo wp_get_attachment_image( $thumnail_data->ID );
+			  echo wp_get_attachment_image( $thumnail_data->ID, 'medium' );
 			  echo '</a>';
 			}
 		}

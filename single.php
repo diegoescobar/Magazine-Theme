@@ -10,9 +10,10 @@
 get_header();
 ?>
 
-	<div class="row small-12 medium-8 columns">
+	<div class="row small-12 medium-8 columns">	
 		<?php
 		while ( have_posts() ) :
+
 			the_post();
 
 			get_template_part( 'template-parts/content', get_post_type() );

@@ -14,10 +14,8 @@
 
 get_header();
 ?>
-
-	<main id="primary" class="site-main">
-		<div class="row align-center" id="content">
-			<div class="small-12 medium-8 columns">
+	<main id="primary" class="site-main row align-center">
+		<div class="small-12 medium-12 columns" id="content">
 			<?php
 			if ( have_posts() ) :
 
@@ -38,10 +36,6 @@ get_header();
 
 			endif;
 			?>
-			</div>
-			<?php if ( is_active_sidebar( 'mag_sidebar' ) ) { ?>
-				<?php get_sidebar(); ?>
-			<?php } ?>
 		</div>
 	</main><!-- #main -->
 

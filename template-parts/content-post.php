@@ -26,9 +26,8 @@
 
 	<div class="entry-content">
 		<?php
-
         if (has_post_format('gallery')){
-            do_shortcode('gallery');
+            echo do_shortcode('[gallery]');
         }
 		the_content(
 			sprintf(

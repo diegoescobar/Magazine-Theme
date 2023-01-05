@@ -9,18 +9,10 @@
 
 ?>
 <article id="content post-<?php the_ID(); ?>" <?php post_class('blog-post'); ?>>
-	<header class="entry-header">
-	
-	</header><!-- .entry-header -->
-
-	
-
 	<div class="entry-content">
-
         <div class="entry-attachment">
             <?php
-            $image_size = apply_filters( 'wporg_attachment_size', 'large' );
-            echo wp_get_attachment_image( get_the_ID(), $image_size );
+            	echo wp_get_attachment_image( get_the_ID(), "full"  );
             ?>
 
             <?php if ( has_excerpt() ) : ?>
@@ -62,4 +54,4 @@
 	<footer class="entry-footer">
 		<?php _mag_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
-</article>#post-<?php the_ID(); ?>
+</article><!--#post-<?php the_ID(); ?>-->
