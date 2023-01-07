@@ -15,13 +15,13 @@ get_header();
 
 
 <?php if ( is_active_sidebar( 'mag_front_sidebar' ) ) { ?>
-    <div id="content" class="large-8 columns" style="border-right: 1px solid #E3E5E8;">
+    <div id="content" class="large-8 columns">
 <?php } else { ?>
     <div id="content" class="large-12 columns">
 <?php } ?>    
 <?php
     if ( have_posts() ) :
-        if ( is_home() && ! is_front_page() ) :
+        if ( is_home() && ! is_front_page()  && !is_paged()) :
             ?>
             <header>
                 <h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>

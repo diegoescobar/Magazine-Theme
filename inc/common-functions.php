@@ -40,7 +40,7 @@ function magazine_numeric_posts_nav() {
       $links[] = $paged + 1;
   }
 
-  echo '<div><ul class="pagination margin-bottom-2" role="navigation" aria-label="Pagination">' . "\n";
+  echo '<div class="text-center"><ul class="pagination margin-bottom-2" role="navigation" aria-label="Pagination">' . "\n";
 
   /** Previous Post Link */
   if ( get_previous_posts_link() )
@@ -78,6 +78,32 @@ function magazine_numeric_posts_nav() {
 
   echo '</ul></div>' . "\n";
 
+
+  infinite_load_more();
+
+}
+
+
+function infinite_load_more(){
+
+    // Initial Post Load.
+    ?>
+    <div class="vl-container mt-20 md:mt-28 xl:mt-32 mb-28 md:mb-36 xl:mb-40 text-center">
+ 
+       <button id="load-more" value="Load More" data-page="<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; ?>" class="load-more-btn"><?php esc_html_e( 'Load More', 'text-domain' ); ?>
+       </button>
+    </div>
+    <?php
+ }
+
+function sidebarColumns( $sidebar ){
+    if ( is_active_sidebar( $sidebar ) ) { 
+        $colSizes = "small-12 medium-8";
+    } else {
+        $colSizes = "small-12 medium-10";
+    }
+
+    return $colSizes;
 }
 
 

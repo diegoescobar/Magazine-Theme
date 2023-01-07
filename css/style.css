@@ -5551,7 +5551,7 @@ a.thumbnail image {
 	display: inline-block;
 	vertical-align: middle;
 	width: 20px;
-	height: 16px;
+	height: 25px;
 	cursor: pointer;
 }
 
@@ -5561,15 +5561,15 @@ a.thumbnail image {
 	left: 0;
 	display: block;
 	width: 100%;
-	height: 2px;
+	height: 5px;
 	background: #fefefe;
-	box-shadow: 0 7px 0 #fefefe, 0 14px 0 #fefefe;
+	box-shadow: 0 10px 0 #fefefe, 0 20px 0 #fefefe;
 	content: '';
 }
 
 .menu-icon:hover::after {
 	background: #cacaca;
-	box-shadow: 0 7px 0 #cacaca, 0 14px 0 #cacaca;
+	box-shadow: 0 10px 0 #cacaca, 0 20px 0 #cacaca;
 }
 
 .menu-icon.dark {
@@ -5577,7 +5577,7 @@ a.thumbnail image {
 	display: inline-block;
 	vertical-align: middle;
 	width: 20px;
-	height: 16px;
+	height: 25px;
 	cursor: pointer;
 }
 
@@ -5587,15 +5587,15 @@ a.thumbnail image {
 	left: 0;
 	display: block;
 	width: 100%;
-	height: 2px;
+	height: 5px;
 	background: #0a0a0a;
-	box-shadow: 0 7px 0 #0a0a0a, 0 14px 0 #0a0a0a;
+	box-shadow: 0 10px 0 #0a0a0a, 0 20px 0 #0a0a0a;
 	content: '';
 }
 
 .menu-icon.dark:hover::after {
 	background: #8a8a8a;
-	box-shadow: 0 7px 0 #8a8a8a, 0 14px 0 #8a8a8a;
+	box-shadow: 0 10px 0 #8a8a8a, 0 20px 0 #8a8a8a;
 }
 
 .accordion-menu li {
@@ -8473,12 +8473,24 @@ i.fi-social-tumblr {
 	font-size: 32px;
 }
 
-.top-bar #search-form #search-input {
-	width: 80px;
+.top-bar #search-form #search-input, .top-bar #search-form input[type="search"] {
+	width: 72px;
+	text-align: center;
+}
+
+.top-bar #search-form #search-input:focus, .top-bar #search-form input[type="search"]:focus {
+	width: 120px;
+}
+
+.top-bar #search-form #search-input, .top-bar #search-form input[type="search"] {
+	-webkit-transition: all 0.7s ease 0s;
+	-moz-transition: all 0.7s ease 0s;
+	-o-transition: all 0.7s ease 0s;
+	transition: all 0.7s ease 0s;
 }
 
 .top-bar .dropdown.menu li.is-active a {
-	color: #fff;
+	color: #fefefe;
 }
 
 .top-bar .sub-menu, .top-bar .submenu {
@@ -8504,6 +8516,14 @@ i.fi-social-tumblr {
 
 .post-thumbnail.no-thumb span {
 	color: #e6e6e6;
+}
+
+@media screen and (min-width: 960px) {
+	.alignwide, .alignfull {
+		width: 100vw;
+		max-width: 100vw;
+		margin-left: calc(50% - 50vw);
+	}
 }
 
 /*--------------------------------------------------------------

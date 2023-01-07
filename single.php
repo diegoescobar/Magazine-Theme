@@ -7,10 +7,17 @@
  * @package _magazine
  */
 
+
+if ( is_active_sidebar( 'mag_sidebar' )  && !has_post_format( 'gallery' ) ) { 
+	$colSizes = "small-12 medium-8";
+} else {
+	$colSizes = "small-12 medium-10";
+}
+
 get_header();
 ?>
 
-	<div class="row small-12 medium-8 columns">	
+	<div class="row <?php echo $colSizes; ?> columns">	
 		<?php
 		while ( have_posts() ) :
 
@@ -35,9 +42,7 @@ get_header();
 	</div>
 
 	
-	<?php if ( is_active_sidebar( 'mag_sidebar' )  && !has_post_format( 'gallery' ) ) { 
-		
-		?>
+	<?php if ( is_active_sidebar( 'mag_sidebar' )  && !has_post_format( 'gallery' ) ) { ?>
 		<?php get_sidebar(); ?>
 	<?php } ?>
 

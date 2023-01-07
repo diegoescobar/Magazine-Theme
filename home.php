@@ -17,12 +17,12 @@ get_header();
 <hr>
 
 <div class="container">
-  <div class="row" style="border-right: 1px solid #E3E5E8;">
+  <div class="row content-row">
 
   <?php
         if ( have_posts() ) :
 
-            if ( is_home() && ! is_front_page() ) :
+            if ( is_home() && ! is_front_page() && !is_paged()) :
                 ?>
                 <header>
                     <h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>

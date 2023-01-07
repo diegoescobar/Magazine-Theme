@@ -33,9 +33,8 @@ $stickyHeader = get_option( 'sticky_header', true );
 ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', '_mag' ); ?></a>
-
-	<header id="masthead" class="site-header" <?php if ($stickyHeader) echo 'data-sticky-container'; ?>>
-	<div class="top-bar" <?php if ($stickyHeader) echo 'data-sticky data-anchor="content"'; ?>>
+	<header id="masthead" class="site-header" <?php if ($stickyHeader){?>data-sticky-container<?php } ?>>
+	<div class="top-bar" <?php if ($stickyHeader){?> data-sticky data-margin-top='0' style="width:100%" data-top-anchor="1" data-btm-anchor="content:bottom"<?php } ?>>
 		<!-- Sub Navigation -->
 		<div class="top-bar-left">
 			<div class="hmbgr-menu" data-responsive-toggle="top-bar-menu" data-hide-for="medium">

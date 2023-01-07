@@ -8,7 +8,7 @@
  *
  * @return String $output
  */
-function my_custom_gallery( $output, $attr, $instance ) {
+function magazine_gallery( $output, $attr, $instance ) {
 
     $post = get_post();
     static $instance = 0;
@@ -189,4 +189,4 @@ function my_custom_gallery( $output, $attr, $instance ) {
 
 }
 
-add_filter( 'post_gallery', 'my_custom_gallery', 10, 3 );
+add_filter( 'post_gallery', 'magazine_gallery', 10, 3 );

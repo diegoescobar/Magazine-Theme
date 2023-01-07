@@ -23,6 +23,8 @@ function _mag_setup() {
 
 	add_theme_support( 'post-thumbnails' );
 
+	add_theme_support( 'align-wide' );
+
 	register_nav_menus(
 		array(
 			'main-menu' 	=> esc_html__( 'Primary', '_mag' ),
@@ -137,6 +139,8 @@ function _mag_scripts() {
 
 	wp_enqueue_script( '_mag-reading-time', get_template_directory_uri() . '/js/reading-time.js', array(), _S_VERSION, true );
 
+	wp_enqueue_script( '_mag-load-more',  get_template_directory_uri() . '/js/loadmore.js', array(), _S_VERSION, true );
+
 	// wp_enqueue_script( '_mag-bionic-reader', get_template_directory_uri() . '/js/bionical-reader.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -179,3 +183,16 @@ require_once TEMPLATEPATH . '/updates/init.php';
 
 
 require_once get_template_directory() . '/inc/custom-gallery.php';
+
+
+
+function prefix_category_title( $title ) {
+    if ( is_category() ) {
+        $title = single_cat_title( '', false );
+    }
+	if ( is_tag() ){
+		$title = single_tag_title( '', false );
+	}
+    return $title;
+}
+// add_filter( 'get_the_archive_title', 'prefix_category_title' );

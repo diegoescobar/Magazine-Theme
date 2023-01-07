@@ -13,11 +13,19 @@
  */
 
 get_header();
+
+
+if ( is_active_sidebar( 'mag_sidebar' )  && !has_post_format( 'gallery' ) ) { 
+	$colSizes = "small-12 medium-8";
+ } else {
+	$colSizes = "small-12 medium-10";
+ }
+
 ?>
 
 	<main id="primary" class="site-main">
 		<div class="row" id="content">
-      	<div class="small-12 medium-8 columns">
+      	<div class="<?php echo $colSizes; ?> columns">
 		<?php
 		if ( have_posts() ) :
 
